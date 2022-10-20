@@ -9,12 +9,8 @@ class Post < ApplicationRecord
     end
 
     # A method that updates the posts counter for a user.
-    def updatecounter
-        # user.postsCounter +=1
-        # user.save
+    def update_user_posts_counter
+        user.update(postsCounter: use.posts.length)
     end
-
-
-    
 
 end
